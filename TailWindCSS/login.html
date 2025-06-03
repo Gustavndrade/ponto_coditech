@@ -7,7 +7,7 @@
     <title>Login</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-slate-300">
+<body class="bg-[#082031]">
 <header class="p-2 pb-[15px] text-white font-sans font-bold text-3xl bg-[linear-gradient(45deg,#082031,#0b2e47,#cabcbcb7)]">
         <div class="flex justify-between items-center">
             <h1 class="flex items-center gap-5">
@@ -24,22 +24,27 @@
     </header>
 
     <main class="flex justify-center items-center h-[80vh] font-medium">
-            <div class="flex flex-col gap-10 bg-[#082031] p-4 rounded-[15px] w-[500px] shadow-[0px_3px_25px_black]">
-                <h2 class="text-white text-center text-[30px]">LOGIN</h2>
-                <div class="flex flex-col">
-                    <input id="CPF" class="bg-white rounded-[8px] p-3" type="text" placeholder="CPF" aria-label="Insira seu CPF">
+            <div class="flex flex-col gap-10 bg-white p-4 rounded-[15px] w-[500px] shadow-[0px_3px_25px_black]">
+                <h2 class="text-[#f2800d] text-center text-4xl font-bold">LOGIN</h2>
+                <div class="flex flex-col bg-slate-300 rounded-[8px]">
+                    <select name="Seletor" id="Seletor" class="p-3">
+                        <option value="1">Robbert</option>
+                        <option value="2">Samuel</option>
+                        <option value="3">Pedro</option>
+                        <option value="4">rancor</option>
+                    </select>
                 </div>
                 <div class="flex flex-col">
-                    <input class="bg-white rounded-[8px] p-3" type="password" placeholder="Senha" aria-label="Insira sua senha">
+                    <input class="bg-slate-300 rounded-[8px] p-3" type="password" placeholder="Senha" aria-label="Insira sua senha">
                 </div>
-                <div class="flex justify-center mt-4">
-                    <button class="bg-[#f2800d] hover:bg-[#d96d00] text-white font-bold py-4 px-4 rounded-[28px] w-[200px]">
-                    CADASTRAR
-                    </button>
+                <div class="flex flex-col justify-center mt-4">
+                <button class="bg-[#f2800d] hover:bg-[#d96d00] text-white font-bold p-3 rounded-md w-full">
+                    ENTRAR
+                </button>
+                <div class="flex items-center justify-center pt-4">
+                    <h3 class="text-sm text-center font-semibold">Não tem uma conta? <a href="cadastro.html" class="hover:text-blue-300 underline text-blue-900 font-bold">Painel Administrativo</a></h3> 
                 </div>
-                <h3 class="text-white text-sm text-center">Não tem uma conta? <a href="cadastro.html" class="hover:text-blue-300 hover:underline">clique aqui.</a></h3>
-            </div>
-    </main>
+            </main>
    <script src="https://unpkg.com/imask"></script>
 <script>
   IMask(document.getElementById('CPF'), {
