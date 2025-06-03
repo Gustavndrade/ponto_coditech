@@ -27,10 +27,10 @@
             <div class="flex flex-col gap-10 bg-[#082031] p-4 rounded-[15px] w-[500px] shadow-[0px_3px_25px_black]">
                 <h2 class="text-white text-center text-[30px]">LOGIN</h2>
                 <div class="flex flex-col">
-                    <input class="bg-white rounded-[8px] p-3" type="text" placeholder="CPF" aria-label="Insira seu CPF">
+                    <input id="CPF" class="bg-white rounded-[8px] p-3" type="text" placeholder="CPF" aria-label="Insira seu CPF">
                 </div>
                 <div class="flex flex-col">
-                    <input class="bg-white rounded-[8px] p-3" type="text" placeholder="Senha" aria-label="Insira sua senha">
+                    <input class="bg-white rounded-[8px] p-3" type="password" placeholder="Senha" aria-label="Insira sua senha">
                 </div>
                 <div class="flex justify-center mt-4">
                     <button class="bg-[#f2800d] hover:bg-[#d96d00] text-white font-bold py-4 px-4 rounded-[28px] w-[200px]">
@@ -40,6 +40,13 @@
                 <h3 class="text-white text-sm text-center">Não tem uma conta? <a href="cadastro.html" class="hover:text-blue-300 hover:underline">clique aqui.</a></h3>
             </div>
     </main>
-   
+   <script src="https://unpkg.com/imask"></script>
+<script>
+  IMask(document.getElementById('CPF'), {
+    mask: '000.000.000-00'
+  });
+
+</script>
+
 </body>
 </html> 
