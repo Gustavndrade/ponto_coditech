@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-[#082031]">
-    <header class="p-2 pb-[15px] text-white font-sans font-bold text-3xl bg-[linear-gradient(45deg,#082031,#0b2e47,#cabcbcb7)]">
+   <header class="p-2 pb-[15px] text-white font-sans font-bold text-3xl bg-[linear-gradient(45deg,#082031,#0b2e47,#cabcbcb7)]">
         <div class="flex justify-between items-center">
             <h1 class="flex items-center gap-5">
                 <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech">
@@ -16,10 +16,13 @@
             </h1>
             <!--
             <nav>
-                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-medium p-2 pb-[8px] text-[17px]" href="login.html">LOGIN</a>
-                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-medium p-2 pb-[8px] text-[17px]" href="cadastro.html">CADASTRO</a>
+                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-normal p-2 pb-[8px]" href="login.html">login</a>
+                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-normal p-2 pb-[8px]" href="cadastro.html">cadastro</a>
             </nav>
         -->
+        <div class="flex justify-center h-[15vh] items-center p-2 text-[#d96d00] text-5xl font-semibold text-shadow-[1px_1px_0px_black]" id="relogio">
+            00:00:00
+        </div>
         </div>
     </header>
 
@@ -88,7 +91,7 @@
             </div>
 
             <div class="flex items-center justify-center pt-4">
-                <h3 class="text-sm text-center font-semibold">Já tem uma conta? <a href="login.html" class="hover:text-blue-300 underline text-blue-900 font-bold">Faça login.</a></h3> 
+                <h3 class="text-sm text-center font-semibold">Já tem uma conta? <a href="login.html" class="hover:text-[#f2800d] underline text-[#d96d00] font-bold">Faça login.</a></h3> 
             </div>
         </div>
     </main>
@@ -107,6 +110,18 @@
     mask: '(00) 00000-0000'
   });
 </script>
+<script>
+                function relogio(){
+                const agora = new Date();
+                var horas = agora.getHours().toString().padStart(2, '0');
+                var minutos = agora.getMinutes().toString().padStart(2,'0');
+                var segundos = agora.getSeconds().toString().padStart(2,'0');
+                
+            document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
 
+        }
+        setInterval(relogio, 1000);
+        relogio();
+</script>
 </body>
 </html>
