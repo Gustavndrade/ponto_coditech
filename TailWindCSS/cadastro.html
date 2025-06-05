@@ -1,127 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo_coditech/ctcompletoico/favicon.ico">
-    <title>Cadastro</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo_coditech/ctcompletoico/favicon.ico" />
+  <title>Cadastro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
 </head>
-<body class="bg-[#082031]">
-   <header class="p-2 pb-[15px] text-white font-sans font-bold text-3xl bg-[linear-gradient(45deg,#082031,#0b2e47,#cabcbcb7)]">
-        <div class="flex justify-between items-center">
-            <h1 class="flex items-center gap-5">
-                <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech">
-                PONTO CODITECH
-            </h1>
-            <!--
-            <nav>
-                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-normal p-2 pb-[8px]" href="login.html">login</a>
-                <a class="text-xl text-black hover:bg-[#f2800d] hover:text-white rounded-[6px] font-normal p-2 pb-[8px]" href="cadastro.html">cadastro</a>
-            </nav>
-        -->
-        <div class="flex justify-center h-[15vh] items-center p-2 text-[#d96d00] text-5xl font-semibold text-shadow-[1px_1px_0px_black]" id="relogio">
-            00:00:00
+<body class="md:bg-[#082031]">
+  <header class="p-2 pb-[15px] mb-10 relative z-10 text-white font-sans font-bold text-3xl bg-[#0b2e47]">
+    <div class="flex justify-between items-center flex-wrap gap-4">
+      <h1 class="flex items-center gap-5">
+        <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech" />
+        PONTO CODITECH
+      </h1>
+    </div>
+  </header>
+
+  <main class="flex items-center justify-center px-4 pb-12">
+    <div class="flex flex-col gap-4 bg-white rounded-3xl w-full max-w-4xl px-6 py-10 shadow-xl">
+      <h2 class="text-center font-bold text-4xl text-[#f2800d]">CADASTRO</h2>
+      <div class="gap-6 flex flex-wrap md:flex-nowrap justify-between">
+        <div class="flex flex-col gap-3 w-full md:w-[48%]">
+          <label for="nome">Nome</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="nome" type="text" placeholder="Nome completo" required />
+          <label for="CPF">CPF</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="CPF" type="text" placeholder="000.000.000-00" required />
+          <label for="RG">RG</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="RG" type="text" placeholder="0000000" required />
+          <label for="telefone">Telefone</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="telefone" type="text" placeholder="(00) 00000-0000" required />
         </div>
+        <div class="flex flex-col gap-3 w-full md:w-[48%]">
+          <label for="logradouro">Logradouro</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="logradouro" type="text" placeholder="Ex: Rua, Avenida" required />
+          <label for="bairro">Bairro</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="bairro" type="text" placeholder="Nome do Bairro" required />
+          <label for="numero">Número</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="numero" type="text" placeholder="Número da moradia" required />
+          <label for="senha">Senha</label>
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="senha" type="password" placeholder="Escolha uma Senha" required />
         </div>
-    </header>
+      </div>
 
-    <main class="flex items-center h-[80vh] justify-center">
-        <div class="flex flex-col gap-4 bg-white rounded-3xl w-[500px] px-8 py-10 shadow-[0px_3px_10px_black]">
+      <label for="cargo" class="text-xl mt-4">Cargo</label>
+      <select id="cargo" name="cargo" class="p-2 bg-slate-300 text-black rounded-md">
+        <option value="">Selecione seu Cargo</option>
+        <option value="1">Front-End</option>
+        <option value="2">Back-End</option>
+        <option value="3">UX/UI</option>
+        <option value="4">PO</option>
+      </select>
 
-            <h2 class="text-center font-bold text-4xl text-[#f2800d]">CADASTRO</h2>
+      <button class="bg-[#f2800d] hover:bg-[#d96d00] hover:border-2 border-2 border-[#d96d00] hover:border-orange-400 text-white font-bold p-3 rounded-md w-full mt-4">
+        CADASTRAR
+      </button>
 
-            <div class="gap-3 flex justify-between">
+      <div class="text-center pt-2">
+        <h3 class="text-sm font-semibold">Já tem uma conta?
+          <a href="login.html" class="hover:text-[#f2800d] underline text-[#d96d00] font-bold">Faça login.</a>
+        </h3>
+      </div>
+    </div>
+  </main>
 
-                <div class="flex flex-col gap-2">
-
-                    <div class="flex flex-col gap-1">
-                        <label for="nome">Nome</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="nome" type="text" placeholder="Nome completo" aria-label="Digite seu nome completo" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="CPF">CPF</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="CPF" type="text" placeholder="000.000.000-00" aria-label="Digite seu CPF" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="RG">RG</label>
-                      <input class="bg-slate-300 p-2 rounded-[5px] text-black" id="RG" type="text" placeholder="0000000" aria-label="Digite seu RG" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="telefone">Telefone</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="telefone" type="text" placeholder="(00) 00000-0000" aria-label="Digite seu numero de telefone" required>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <div class="flex flex-col gap-1">
-                        <label for="logradouro">Logradouro</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="logradouro" type="text" placeholder="Ex: (Rua, Avenida, etc)" aria-label="Digite o logradouro" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="bairro">Bairro</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" t id="bairro" type="text" placeholder="Nome do Bairro" aria-label="Digite o nome do seu bairro" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="numero">Número</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black"  id="numero" type="text" placeholder="Número da moradia" aria-label="Digite o número da sua moradia" required>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <label for="senha">Senha</label>
-                        <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="senha" type="password" placeholder="Escolha uma Senha" aria-label="Escolha sua senha" required>
-                    </div>
-                </div>
-            </div>
-            <label for="cargo" class="text-xl">Cargo</label>
-            <div class="flex flex-col gap-2">
-                    <div class="flex flex-col bg-slate-300 text-black rounded-[8px]">
-                        <select id="cargo" name="cargo" class="p-2">
-                            <option class="bg-white" value="">Selecione seu Cargo</option>
-                            <option class="bg-white" value="1">Front-End</option>
-                            <option class="bg-white" value="2">Back-End</option>
-                            <option class="bg-white" value="3">UX/UI</option>
-                            <option class="bg-white" value="4">PO</option>
-                        </select>
-                    </div>
-            </div required>
-            
-            <div class="flex justify-center mt-4">
-                <button class="bg-[#f2800d] hover:bg-[#d96d00] text-white font-bold p-3 rounded-md w-full">
-                    CADASTRAR
-                </button>
-            </div>
-
-            <div class="flex items-center justify-center pt-4">
-                <h3 class="text-sm text-center font-semibold">Já tem uma conta? <a href="login.html" class="hover:text-[#f2800d] underline text-[#d96d00] font-bold">Faça login.</a></h3> 
-            </div>
-        </div>
-    </main>
-
-    <script src="https://unpkg.com/imask"></script>
-<script>
-  IMask(document.getElementById('CPF'), {
-    mask: '000.000.000-00'
-  });
-
-  IMask(document.getElementById('RG'), {
-    mask: '0000000'
-  });
-
-  IMask(document.getElementById('telefone'), {
-    mask: '(00) 00000-0000'
-  });
-</script>
-<script>
-                function relogio(){
-                const agora = new Date();
-                var horas = agora.getHours().toString().padStart(2, '0');
-                var minutos = agora.getMinutes().toString().padStart(2,'0');
-                var segundos = agora.getSeconds().toString().padStart(2,'0');
-                
-            document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
-
-        }
-        setInterval(relogio, 1000);
-        relogio();
-</script>
+  <script src="https://unpkg.com/imask"></script>
+  <script>
+    IMask(document.getElementById('CPF'), { mask: '000.000.000-00' });
+    IMask(document.getElementById('RG'), { mask: '0000000' });
+    IMask(document.getElementById('telefone'), { mask: '(00) 00000-0000' });
+  </script>
 </body>
 </html>
