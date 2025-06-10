@@ -4,6 +4,26 @@
 
     const formulario = document.querySelector("#formulario");
     
-    function proximo() {
-    
+    var passoatual = 0;
+    const container = document.getElementById("container");
+    const passo = container.children
+
+    function proximo_passo() {
+        const tamanho = passo[0].offsetWidith;
+        container.style.transform = `translateX(-${passoatual * tamanho}px)`;
     }
+
+    document.querySelector("#proximo").addEventListener("click", () => {
+        if (passoatual < passo.length - 1){
+            passoatual++;
+            proximo_passo();
+        }
+    })
+
+    document.querySelector("#voltar").addEventListener("click", () => {
+        if (passoatual > 0){
+            passoatual--;
+            proximo_passo
+        }
+    })
+  
