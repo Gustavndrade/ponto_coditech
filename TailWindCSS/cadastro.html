@@ -20,32 +20,28 @@
   <header class="p-2 pb-[15px] mb-10 relative z-10 text-white font-sans font-bold text-3xl bg-[#0b2e47]">
     <div>
       <h1 class="flex items-center gap-5">
-        <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech" />
-        PONTO CODITECH
+        <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech"> PONTO CODITECH
       </h1>
     </div>
   </header>
 
   <main class="flex items-center justify-center px-4 pb-12">
-    <div class="flex flex-col gap-4 bg-white rounded-3xl w-[400px] overflow-hidde max-w-4xl px-6 py-10 shadow-xl">
+    <div class="flex flex-col gap-4 bg-white rounded-3xl w-[400px] overflow-hidden max-w-4xl px-6 py-10 shadow-xl">
       <h2 class="text-center font-bold text-4xl text-[#f2800d]">CADASTRO</h2>
-      <div id="container" class="flex justify-between w-[730px] transition-transform duration-500 ease-in-out gap-6">
+      <div id="container" class="flex w-[800px] transition-transform duration-500 ease-in-out">
         <!-- primeira tela -->
-        <div class="flex flex-col gap-3 w-[1460px]">
+        <div class="flex flex-col gap-3 w-[400px] pr-12">
           <label for="nome">Nome</label>
-          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="nome" type="text" placeholder="Nome completo"
-            required />
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="nome" type="text" placeholder="Nome completo" required />
           <label for="CPF">CPF</label>
-          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="CPF" type="text" placeholder="000.000.000-00"
-            required />
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="CPF" type="text" placeholder="000.000.000-00" required />
           <label for="RG">RG</label>
           <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="RG" type="text" placeholder="0000000" required />
           <label for="telefone">Telefone</label>
-          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="telefone" type="text"
-            placeholder="(00) 00000-0000" required />
+          <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="telefone" type="text" placeholder="(00) 00000-0000" required />
         </div>
         <!-- segunda tela -->
-        <div class="flex flex-col gap-3 w-[1460px]">
+        <div class="flex flex-col gap-3 w-[400px] pr-12">
           <label for="logradouro">Logradouro</label>
           <input class="p-2 bg-slate-300 rounded-[5px] text-black" id="logradouro" type="text"
             placeholder="Ex: Rua, Avenida" required />
@@ -76,11 +72,11 @@
         <button onclick="proximo_passo();" id="proximo" class="hover:bg-green-600 bg-green-500 text-white font-bold p-3 transition-all duration-300 border-2 hover:border-green-400 rounded-md w-full">PRÓXIMO
         </button>
       </div>
-      <div class="text-center pt-2">
+      <!-- <div class="text-center pt-2">
         <h3 class="text-sm font-semibold">Já tem uma conta?
           <a href="index.html" class="hover:text-[#f2800d] underline text-[#d96d00] font-bold">Faça login.</a>
         </h3>
-      </div>
+      </div> -->
     </div>
   </main>
 

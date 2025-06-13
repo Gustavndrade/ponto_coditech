@@ -15,13 +15,14 @@
         if (passoatual < passo.length -1){
             passoatual++;
             proximo_passo();
+            document.getElementById('proximo').innerHTML = 'CADASTRAR'
         }
     })
 
     document.querySelector("#voltar").addEventListener("click", () => {
         if (passoatual > 0){
             passoatual--;
-            proximo_passo();
+            proximo_passo();document.getElementById('proximo').innerHTML = 'PRÓXIMO'
         }
     })
   
