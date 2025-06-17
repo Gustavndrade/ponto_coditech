@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo_coditech/ctcompletoico/favicon.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logo_coditech/ctcompletoico/favicon.ico" />
     <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col h-full min-h-screen">
-    <header class="p-2 pb-[15px] mb-2 relative z-10 text-white font-sans font-bold text-3xl bg-[#0b2e47]">
-    <div>
-        <h1 class="flex items-center gap-5">
-            <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech" />
-            PONTO CODITECH
-        </h1>
-    </div>
-</header>
-<div class="flex justify-end">
-<h3 class="p-2 text-sm font-bold"><a href="index.html" class="hover:text-[#f2800d] underline text-[#d96d00]">PONTO</a></h3>
-<h3 class="p-2 text-sm font-bold"><a href="cadastro.html" class="hover:text-[#f2800d] underline text-[#d96d00]">CADASTRAR</a></h3>
-</div>
-   <main class="flex-1 p-4 mt-10">  
-        <section class="flex w-full flex-col md:flex-row justify-center gap-10">
-            <div class="p-4 md:px-20 shadow rounded-lg bg-slate-300">
-                <h2>total de funcionarios</h2>
-            </div>
-            <div class="p-4 md:px-20 shadow rounded-lg bg-slate-300">
-                <h2>funcionarios online <!--funcionarios com ponto aberto--> </h2>
-            </div>
-            <div class="p-4 md:px-20 shadow rounded-lg bg-slate-300">
-                <h2>funcionarios offline <!--funcionarios com ponto fechado--></h2>
-            </div>
-        </section>
 
-        <section class="flex justify-center rounded-md overflow-hidden">
-            <table class="w-full md:w-[107vh] mt-3 text-left rounded-md overflow-hidden">
-                <thead class="bg-slate-300">
-                    <tr>
-                        <th class="pb-4 p-1">Funcionário</th>
-                        <th class="pb-4 p-1">Data</th>
-                        <th class="pb-4 p-1">Status</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-slate-200">
-                    <tr>
-                        <td class="p-1">Glauber</td>
-                        <td class="p-1">06/06/2025</td>
-                        <td class="p-1">Online</td>
-                    </tr>
-                    <tr>
-                        <td class="p-1">Hommer</td>
-                        <td class="p-1">06/06/2025</td>
-                        <td class="p-1">Offline</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+<body class="bg-[#082031] text-white font-sans min-h-screen">
+
+    <header>
+        <nav class="flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-[#0b2e47] shadow-md">
+            <div class="flex items-center gap-4 text-2xl font-bold">
+                <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech" class="h-10 w-auto" />
+                <span>PONTO CODITECH</span>
+            </div>
+            <div class="flex gap-4 mt-3 md:mt-0">
+                <a href="index.html" class="hover:opacity-80 transition px-3 py-2 rounded-md bg-[#145374]">INÍCIO</a>
+                <a href="cadastro.html"
+                    class="hover:opacity-80 transition px-3 py-2 rounded-md bg-[#145374]">CADASTRO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex justify-center px-4 py-10">
+        <div class="w-full max-w-6xl bg-white rounded-xl shadow-md p-6 text-black">
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-center font-bold uppercase">
+                <div class="bg-slate-300 p-6 rounded-lg shadow">Total de Funcionários</div>
+                <div class="bg-slate-300 p-6 rounded-lg shadow">Funcionários Online</div>
+                <div class="bg-slate-300 p-6 rounded-lg shadow">Funcionários Offline</div>
+            </section>
+
+
+            <section class="overflow-x-auto">
+                <table class="min-w-full bg-slate-300 rounded-lg overflow-hidden text-left">
+                    <thead class="bg-slate-400 text-gray-800">
+                        <tr>
+                            <th class="px-4 py-3">Funcionário</th>
+                            <th class="px-4 py-3">Data</th>
+                            <th class="px-4 py-3">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-900">
+                        <tr class="border-t border-gray-400">
+                            <td class="px-4 py-3">Glauber</td>
+                            <td class="px-4 py-3">06/06/2025</td>
+                            <td class="px-4 py-3">Online</td>
+                        </tr>
+                        <tr class="border-t border-gray-400">
+                            <td class="px-4 py-3">Hommer</td>
+                            <td class="px-4 py-3">06/06/2025</td>
+                            <td class="px-4 py-3">Offline</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
-   </footer>
+
 </body>
+
 </html>

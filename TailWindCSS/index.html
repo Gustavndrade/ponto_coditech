@@ -22,16 +22,21 @@
 </head>
 
 <body class="md:bg-[#082031]">
-  <header class="p-2 pb-[15px] text-white font-sans relative z-10 font-bold text-3xl bg-[#0b2e47]">
-    <div class="flex justify-between items-center flex-wrap gap-4">
-      <h1 class="flex items-center gap-5">
-        <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech"> PONTO CODITECH
-      </h1>
-    </div>
-  </header>
+   <header>
+        <nav class="flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-[#0b2e47] shadow-md text-white">
+            <div class="flex items-center gap-4 text-2xl font-bold">
+                <img src="logo_coditech/ctcompletopng/5-80.png" alt="Logo Coditech" class="h-10 w-auto" />
+                <span>PONTO CODITECH</span>
+            </div>
+            <div class="flex gap-4 mt-3 md:mt-0">
+                <a href="dashboard.html"
+                    class="hover:opacity-80 transition px-3 py-2 rounded-md bg-[#145374]">DASHBOARD</a>
+            </div>
+        </nav>
+    </header>
 
   <main class="flex justify-center items-center h-[80vh] px-4">
-    <div class="flex flex-col gap-10 bg-white px-8 py-12 rounded-[15px] w-full max-w-md md:shadow-xl">
+    <div class="flex flex-col gap-10 bg-white px-8 py-12 rounded-xl w-full max-w-md md:shadow-xl">
       <h2 class="text-[#f2800d] text-center text-4xl font-bold">BATER PONTO</h2>
       <div class="flex flex-col gap-3">
         <select name="Seletor" id="Seletor" class="p-3 bg-slate-300 rounded-lg">
